@@ -1,6 +1,5 @@
-# 📉 Global Layoffs: A Deep Dive Into the Mass Job Cuts of 2020–2023  
-### A Full SQL + Data Cleaning + Data Storytelling Case Study  
-*By TJ – Data Analyst / Banking & Finance Background*
+# 📉 Global Layoffs SQL Case Study  
+*A Story About Economic Turbulence, Workforce Cuts, and the Data Behind the Headlines*
 
 ---
 
@@ -10,105 +9,327 @@ Headlines will tell you:
 
 > “Tech company lays off 10,000 employees.”  
 > “Finance giant cuts 18% of its workforce.”  
-> “Thousands laid off due to market downturn.”
+> “Thousands laid off due to economic uncertainty.”
 
-But behind those headlines are deeper questions:
+But headlines hide deeper questions:
 
-- **Which industries are actually hurting the most?**  
-- **Which countries are taking the biggest hits?**  
-- **Are layoffs accelerating or calming down?**  
-- **Which companies lay off more people than entire nations?**  
-- **And is this the end… or the beginning of something bigger?**
+- **Which industries are actually collapsing the fastest?**  
+- **Which countries are hurting the most?**  
+- **Are layoffs slowing down — or are we just getting started?**  
+- **Which companies laid off more people than entire nations?**  
+- **Are certain regions much more unstable than others?**
 
-This project answers all of that using **MySQL**, **data cleaning**, **window functions**, and **storytelling** — but more importantly, through the eyes of someone who has **worked inside the banking and finance system** and seen firsthand how employment cycles shape real human lives.
+This project answers all of these using real global layoff data, MySQL analysis, and an investigative approach inspired by real industry experiences.
 
-This isn’t just data.  
-This is a **global story of struggle, survival, and economic turbulence** reflected through numbers.
+This isn’t just SQL —  
+this is a **global story of survival, instability, and market correction told through data**.
 
-So sit back, relax, grab your popcorn 🍿 —  
-and let me show you what I found inside this dataset.
+Grab your coffee.  
+Let’s dig in. ☕📊
 
 ---
 
 # 🎯 Why I Wanted to Analyze Layoffs
 
-For the past several years, I’ve watched layoffs shake industries across the world — especially during and after the pandemic.
+Like millions of others, I watched layoffs ripple across the world:
 
-I saw:
-- Friends lose jobs in tech  
-- Entire departments dissolve in finance  
-- Companies restructure again and again  
-- Job applicants panic as hiring froze overnight  
-- Teams going from 20 people to 6
+- One week a tech company cuts 12,000 people  
+- The next week, startups collapse overnight  
+- Departments wiped out completely  
+- Hiring freezes everywhere  
+- People with 10+ years of experience suddenly out of work  
 
-And I wondered:
+I kept asking myself:
 
-> **“Is this normal? Or are we living in a once-in-a-generation employment crisis?”**
+> **“Are these just isolated incidents… or part of a bigger global pattern?”**
 
-That curiosity led me to build this project.
+So I decided to use SQL to uncover the truth.
 
-I wanted to combine:
-- My **banking & finance experience**
-- My evolving **SQL & Data Analyst skills**
-- And a real dataset that reflects global economic change
+I wanted this project to blend:
 
-This project became a journey — part analytical, part emotional, part investigative.
+- My real-world **banking & finance experience**  
+- My **SQL analysis skills**  
+- A dataset large enough to reveal global economic signals  
+- A storytelling approach that makes the data feel *human*
+
+This became more than a project.  
+It became an investigation.
 
 ---
 
 # 🔍 What You’re Going to Learn from This Project
 
-By reading this article, you will learn:
+By the time you finish this breakdown, you’ll understand:
 
-### ✔️ How to clean a messy global dataset using SQL  
-### ✔️ How window functions & CTEs unlock deep insights  
-### ✔️ Which industries are collapsing the fastest  
-### ✔️ Why the U.S. dominates layoff counts  
-### ✔️ How layoffs have evolved month-by-month  
-### ✔️ And how some companies laid off more people than entire countries
+### ✔️ Which industries suffered the deepest cuts  
+### ✔️ Which countries carried the heaviest burden  
+### ✔️ Which companies topped yearly layoff rankings  
+### ✔️ How layoffs evolved month-by-month  
+### ✔️ Which companies almost *collapsed entirely* (80–100% layoffs)  
+### ✔️ How global economic stress shows up in workforce data
 
-Plus—  
-you’ll gain a deeper understanding of the **human impact** behind these numbers.
+This is real-world, practical business intelligence — not just SQL results.
 
 ---
 
 # 📚 Dataset Details
 
-The dataset contains:
+The dataset contains **global layoff events** with:
 
 - Company  
-- Industry  
 - Country  
+- Industry  
 - Total laid off  
-- Percentage laid off  
-- Company stage  
+- Percentage of workforce laid off  
+- Stage (startup maturity)  
 - Funds raised  
-- Date (messy format)  
+- Date of event (messy formats)
 
-Over **10,000 rows** representing global layoffs.
+Real data → real mess:
 
-But the data was messy:
-- Duplicates everywhere  
-- Dates in text format  
-- Inconsistent company name spacing  
-- Meaningless rows  
-- Missing values  
+- Duplicates  
+- Inconsistent formatting  
+- Text dates  
+- Missing fields  
+- Irregular spacing  
+- Null percentages  
 
-Just like a real analyst job.
-
----
-
-# 🛠️ 1. DATA CLEANING (THE HARD PART)
-
-This dataset needed surgery.
+So before analysis came **data cleaning**.
 
 ---
 
-## 🩹 Step 1 — Create a staging table
+# 🛠️ 1. DATA CLEANING — The Hard Part
 
-We never touch raw data.  
-We protect it like an artifact.
+Just like real analysts, the hardest part was fixing the data.
 
-```sql
-CREATE TABLE layoffs_staging LIKE raw_world_layoffs_csv;
-INSERT INTO layoffs_staging SELECT * FROM raw_world_layoffs_csv;
+---
+
+## 🩹 Step 1 — Create a Staging Table  
+Never touch raw data. Make a safe copy.
+
+### 🖼 Screenshot  
+![Staging Table Creation](images/first_staging_table.png)
+
+---
+
+## 🗄 Step 2 — Insert Raw Data into the Staging Table
+
+### 🖼 Screenshot  
+![Staging Table Insert](images/staging_table_insert.png)
+
+---
+
+## 🧹 Step 3 — Detect and Remove Duplicates  
+This dataset had many repeated records — so I used `ROW_NUMBER()` to identify them.
+
+### 🖼 Query  
+![Removing Duplicates Query](images/removing_duplicates.png)
+
+Now the data is clean enough to explore.
+
+---
+
+# 🏭 2. Industry-Level Analysis  
+**Which industries cut the deepest?**
+
+This is NOT “who laid off the most people”.  
+This is **how much of their workforce they eliminated**, on average.
+
+---
+
+## 📊 Query — Average Percentage of Workforce Laid Off by Industry  
+### 🖼 Query  
+![Average Percentage Query](images/average_percentage_laid_off_query.png)
+
+## 📊 Results  
+### 🖼 Screenshot  
+![Average Percentage Results](images/average_percentage_laid_off_results.png)
+
+---
+
+## 🧠 Insight  
+- **Aerospace** → the most severe average layoffs (~29%)  
+- **Construction, Crypto, Energy, Food, Travel** → consistently high (19–22%)  
+- **Healthcare & Education** surprisingly high  
+- **Finance** still averages **~15% per event**
+
+Some industries don’t appear in the press much —  
+but their employees quietly faced **deeper cuts**.
+
+---
+
+# 🌍 3. Country-Level Analysis  
+**Which countries experienced the highest TOTAL layoffs?**
+
+---
+
+## 🖼 Query  
+![Country Totals Query](images/total_laid_off_by_country_query.png)
+
+## 🖼 Results  
+![Country Totals Results](images/total_laid_off_by_country_results.png)
+
+---
+
+## 🧠 Insight  
+- 🇺🇸 **United States** dominates with **~530k layoffs**  
+- 🇮🇳 India → ~61k  
+- 🇩🇪 Germany → ~31k  
+- 🇬🇧 UK, 🇳🇱 Netherlands, 🇦🇺 Australia, 🇨🇦 Canada, 🇮🇱 Israel also heavily impacted  
+
+The U.S. alone accounts for **60–70% of global layoffs**.
+
+---
+
+# 🩺 4. Country Health Summary  
+Totals don’t show patterns — frequency and severity matter too.
+
+---
+
+## 🖼 Query  
+![Country Health Query](images/country_health_query.png)
+
+## 🖼 Results  
+![Country Health Results](images/country_health_results.png)
+
+---
+
+## 🧠 Insight  
+There are **two types of countries**:
+
+### 1️⃣ High-volume cuts (many events, moderate severity)
+- United States  
+- India  
+
+### 2️⃣ Low-volume but extremely severe cuts
+- Singapore (~24% layoffs per event)  
+- Israel  
+- Australia  
+- United Kingdom  
+
+This helps explain economic stability vs. fragility across regions.
+
+---
+
+# 📅 5. Layoffs by Year  
+**Which years were the worst?**
+
+---
+
+## 🖼 Query  
+![Yearly Totals Query](images/total_laid_off_per_year_query.png)
+
+## 🖼 Results  
+![Yearly Totals Results](images/total_laid_off_per_year_results.png)
+
+---
+
+## 🧠 Insight  
+- **2023** → Worst year (~264k layoffs)  
+- **2022** → Second worst (~164k)  
+- **2024** → Still extremely high  
+- **2020–2021** → Lower due to early pandemic stimulus  
+
+Confirms a **multi-year correction wave**, not a one-time shock.
+
+---
+
+# 📈 6. Rolling Monthly Totals  
+This shows layoffs not as events —  
+but as a **growing global wave**.
+
+---
+
+## 🖼 Screenshot  
+![Rolling Totals Query + Results](images/rolling_total_month_&_year.png)
+
+---
+
+## 🧠 Insight  
+The cumulative number climbs steadily every month.  
+Layoffs did **not** slow down — they compounded.
+
+---
+
+# 🏢 7. Top Companies Per Year  
+Which companies laid off the most staff in each year?
+
+---
+
+## 🖼 Query  
+![Company Ranking Query](images/company_ranking_query.png)
+
+## 🖼 Results  
+![Company Ranking Results](images/company_ranking_results.png)
+
+---
+
+## 🧠 Insight  
+- **2020** → Uber, Booking.com, Groupon  
+- **2021** → Bytedance, Zillow, Katerra  
+- **2022** → Meta (11k), Amazon (10k), Cisco  
+- **2023–2024** → Tech giants continue dominating  
+
+Each year tells a different economic story.
+
+---
+
+# 💀 8. Collapse-Level Companies (80–98% Layoffs)  
+This is the list of companies that nearly **shut down**.
+
+---
+
+## 🖼 Query  
+![Collapse Query](images/highest_collapsing_companies_query.png)
+
+## 🖼 Results  
+![Collapse Results](images/highest_collapsing_companies_results.png)
+
+---
+
+## 🧠 Insight  
+Examples include:
+
+- **Flywheel Sports** — 98%  
+- **Pavilion Data** — 96%  
+- **NS8** — 95%  
+- **Vroom** — 90%  
+- **Treehouse** — 90%  
+- **OneWeb** — 85%  
+
+These weren’t layoffs.  
+These were **full organizational collapses**.
+
+---
+
+# 🧩 9. Main Takeaways
+
+### ✔️ The U.S. is responsible for the majority of global layoffs  
+### ✔️ Some industries cut deeper than people realize  
+### ✔️ 2022–2023 were the peak years  
+### ✔️ Layoffs were a long wave, not a one-time event  
+### ✔️ Several companies nearly shut down entirely
+
+This dataset reflects global instability in a way headlines never fully capture.
+
+---
+
+# 🧠 10. Reflections
+
+This project reminded me how much data can reveal about human lives.
+
+Behind each number is:
+- A family affected  
+- A career disrupted  
+- A team dissolved  
+- A company struggling to survive  
+
+Using SQL helped transform chaotic raw data into a clear narrative about global economic stress.
+
+This wasn’t just analysis —  
+it was a real look into how unpredictable the modern job market has become.
+
+---
+
+# 📁 Repository Structure
+
