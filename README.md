@@ -11,7 +11,7 @@ Headlines will tell you:
 > “Finance giant cuts 18% of its workforce.”  
 > “Thousands laid off due to economic uncertainty.”
 
-But headlines hide deeper questions:
+But behind these headlines are even deeper questions:
 
 - **Which industries are actually collapsing the fastest?**  
 - **Which countries are hurting the most?**  
@@ -19,12 +19,13 @@ But headlines hide deeper questions:
 - **Which companies laid off more people than entire nations?**  
 - **Are certain regions much more unstable than others?**
 
-This project answers all of these using real global layoff data, MySQL analysis, and an investigative approach inspired by real industry experiences.
+Therefore, in this project I aimed to answers these questions using real global layoff data, MySQL real-world analysis to uncover the truth behind global layoffs across multiple years and thousands of events.
 
-This isn’t just SQL —  
-this is a **global story of survival, instability, and market correction told through data**.
+But before we dive into charts and trends.
+let’s remember the human side of this story.
+These arent' just numbers... 
+**They’re careers, families, dreams, disappointments, and fresh starts.**.
 
-Grab your coffee.  
 Let’s dig in. ☕📊
 
 ---
@@ -39,9 +40,9 @@ Like millions of others, I watched layoffs ripple across the world:
 - Hiring freezes everywhere  
 - People with 10+ years of experience suddenly out of work  
 
-I kept asking myself:
+And I wondered:
 
-> **“Are these just isolated incidents… or part of a bigger global pattern?”**
+> **“Is this normal? Are these just isolated incidents… or part of a bigger global pattern?”**
 
 So I decided to use SQL to uncover the truth.
 
@@ -72,49 +73,52 @@ This is real-world, practical business intelligence — not just SQL results.
 
 ---
 
-# 📚 Dataset Details
+# 📚 About the Dataset
 
 The dataset contains **global layoff events** with:
 
 - Company  
 - Country  
 - Industry  
-- Total laid off  
-- Percentage of workforce laid off  
+- Count of employees laid off — Total Laid off
+- Percentage of workforce laid off — Percentage Laid Off
 - Stage (startup maturity)  
 - Funds raised  
 - Date of event (messy formats)
 
+More than 10,000 rows spanning industries and countries worldwide.
+But before analysis, it needed serious cleaning.
+
 Real data → real mess:
 
-- Duplicates  
+- Duplicate records
 - Inconsistent formatting  
-- Text dates  
-- Missing fields  
+- Missing values
 - Irregular spacing  
-- Null percentages  
+- Blank rows
+- Non-standardized fields
 
 So before analysis came **data cleaning**.
 
 ---
 
-# 🛠️ 1. DATA CLEANING — The Hard Part
+#  1. DATA CLEANING STAGE — Turning the Chaos into Clarity
 
-Just like real analysts, the hardest part was fixing the data.
+Just like real analysis, the part that required the most attention was fixing the data.
 
 ---
 
 ## 🩹 Step 1 — Create a Staging Table  
 Never touch raw data. Make a safe copy.
 
-### 🖼 Screenshot  
+
 ![Staging Table Creation](images/first_staging_table.png)
 
 ---
 
 ## 🗄 Step 2 — Insert Raw Data into the Staging Table
 
-### 🖼 Screenshot  
+
 ![Staging Table Insert](images/staging_table_insert.png)
 
 ---
@@ -122,7 +126,7 @@ Never touch raw data. Make a safe copy.
 ## 🧹 Step 3 — Detect and Remove Duplicates  
 This dataset had many repeated records — so I used `ROW_NUMBER()` to identify them.
 
-### 🖼 Query  
+
 ![Removing Duplicates Query](images/removing_duplicates.png)
 
 Now the data is clean enough to explore.
@@ -137,12 +141,12 @@ This is **how much of their workforce they eliminated**, on average.
 
 ---
 
-## 📊 Query — Average Percentage of Workforce Laid Off by Industry  
-### 🖼 Query  
+## 📊 Average Percentage of Workforce Laid Off by Industry  
+  
 ![Average Percentage Query](images/average_percentage_laid_off_query.png)
 
 ## 📊 Results  
-### 🖼 Screenshot  
+
 ![Average Percentage Results](images/average_percentage_laid_off_results.png)
 
 ---
