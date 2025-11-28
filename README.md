@@ -1,6 +1,4 @@
-# 📉 Global Layoffs SQL Case Study  
-*A Story About Economic Turbulence, Workforce Cuts, and the Data Behind the Headlines*
-
+# Global Layoffs SQL Case Study  
 ---
 
 ## 💬 Have You Ever Wondered What MASS Layoffs Really Look Like Behind the Scenes?
@@ -25,14 +23,11 @@ But before we dive into charts and trends.
 let’s remember the human side of this story.
 These arent' just numbers... 
 **They’re careers, families, dreams, disappointments, and fresh starts.**.
-
-Let’s dig in. ☕📊
-
 ---
 
 # 🎯 Why I Wanted to Analyze Layoffs
 
-Like millions of others, I watched layoffs ripple across the world:
+Like many others, I watched jobs come and go:
 
 - One week a tech company cuts 12,000 people  
 - The next week, startups collapse overnight  
@@ -44,17 +39,14 @@ And I wondered:
 
 > **“Is this normal? Are these just isolated incidents… or part of a bigger global pattern?”**
 
-So I decided to use SQL to uncover the truth.
+So I decided to use SQL and a little bit of Tableau visuals to uncover the truth.
 
 I wanted this project to blend:
 
 - My real-world **banking & finance experience**  
-- My **SQL analysis skills**  
+- My **SQL-Tableau analysis skills**  
 - A dataset large enough to reveal global economic signals  
-- A storytelling approach that makes the data feel *human*
-
-This became more than a project.  
-It became an investigation.
+- And a storytelling approach to sum it all up!
 
 ---
 
@@ -69,11 +61,11 @@ By the time you finish this breakdown, you’ll understand:
 ### ✔️ Which companies almost *collapsed entirely* (80–100% layoffs)  
 ### ✔️ How global economic stress shows up in workforce data
 
-This is real-world, practical business intelligence — not just SQL results.
+This is real-world, practical business intelligence to have — not just data results.
 
 ---
 
-# 📚 About the Dataset
+# 📚 About the Dataset: download here 👉 [Raw Data (CSV)] (data/Raw_Global_layoffs_file.csv)
 
 The dataset contains **global layoff events** with:
 
