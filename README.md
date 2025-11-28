@@ -80,8 +80,7 @@ The dataset contains **global layoff events** with:
 - Funds raised  
 - Date of event (messy formats)
 
-More than 10,000 rows spanning industries and countries worldwide.
-But before analysis, it needed serious cleaning.
+*But before analysis, it needed serious cleaning.*
 
 Real data → real mess:
 
@@ -96,9 +95,9 @@ So before analysis came **data cleaning**.
 
 ---
 
-#  1. DATA CLEANING STAGE — Turning the Chaos into Clarity
+#  1. DATA CLEANING STAGE 
 
-Just like real analysis, the part that required the most attention was fixing the data.
+As any analysis, this dataset required cleaning, easily one of the most crucial parts for reliable insights.
 
 ---
 
@@ -118,12 +117,12 @@ Never touch raw data. Make a safe copy.
 ---
 
 ## 🧹 Step 3 — Detect and Remove Duplicates  
-This dataset had many repeated records — so I used `ROW_NUMBER()` to identify them.
+This dataset contained numerous duplicate records, so I used the `ROW_NUMBER()` function to identify them. Next, I created a new staging table, `layoffs_staging2`, to remove the duplicates. This approach bypassed the MySQL limitation that prevents the direct deletion of duplicate rows using CTE, ensuring that only distinct values were retained in the new table.
 
 
 ![Removing Duplicates Query](images/removing_duplicates.png)
 
-Now the data is clean enough to explore.
+Now the data is clean enough for the following sections of Explorotary Data Analysis (EDA).
 
 ---
 
@@ -141,7 +140,9 @@ This is **how much of their workforce they eliminated**, on average.
 
 ## 📊 Results  
 
-![Average Percentage Results](images/average_percentage_laid_off_results.png)
+![Average Percentage Results](images/average_percentage_laid_off_results.png) | ![Count vs Percent layoffs](images
+/Count vs Percentage Layoffs_Tableau.png) |
+|---|---|
 
 ---
 
