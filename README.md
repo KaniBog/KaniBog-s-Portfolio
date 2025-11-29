@@ -17,7 +17,7 @@ But behind these headlines are even deeper questions:
 - **Which companies laid off more people than entire nations?**  
 - **Are certain regions much more unstable than others?**
 
-Therefore, in this project I aimed to answers these questions using real global layoff data, MySQL real-world analysis to uncover the truth behind global layoffs across multiple years and thousands of events.
+Therefore, in this project I aimed to answers these questions using real global layoffs data, along with MySQL real-world analysis to uncover the truth behind global layoffs across multiple years and thousands of events.
 
 But before we dive into charts and trends.
 let’s remember the human side of this story.
@@ -50,9 +50,9 @@ I wanted this project to blend:
 
 ---
 
-# 🔍 What You’re Going to Learn from This Project
+# What Readers gain from This Project
 
-By the time you finish this breakdown, you’ll understand:
+By the time you finish reading, you’ll understand:
 
 ### ✔️ Which industries suffered the deepest cuts  
 ### ✔️ Which countries carried the heaviest burden  
@@ -61,7 +61,7 @@ By the time you finish this breakdown, you’ll understand:
 ### ✔️ Which companies almost *collapsed entirely* (80–100% layoffs)  
 ### ✔️ How global economic stress shows up in workforce data
 
-This is real-world, practical business intelligence to have — not just data results.
+This is real-world, practical business intelligence — not just data results.
 
 ---
 
@@ -122,16 +122,12 @@ This dataset contained numerous duplicate records, so I used the `ROW_NUMBER()` 
 
 ![Removing Duplicates Query](images/removing_duplicates.png)
 
-Now the data is clean enough for the following sections of Explorotary Data Analysis (EDA).
+Now the data is clean enough for the following sections of Exploratory Data Analysis (EDA).
 
 ---
 
 # 🏭 2. Industry-level Layoff Severity — Two Ways of Measuring the Same Story
 To understand: **Which industries cut the deepest?**, I looked at layoffs in two different ways: 
-
-
-
-
 ---
 
 ## 1. Average % of Workforce Laid Off (Company-level Severity)
@@ -146,14 +142,30 @@ This metric shows how aggressively companies within each industry cut their staf
 - **Construction, Crypto, Energy, Food, Travel** → consistently high (19–22%)  
 - **Healthcare & Education** surprisingly high  
 - **Finance** still averages **~15% per event**
-  Industries like **Aerospace, Crypto, Travel, and Construction** have extremely high average percentage cuts because many companies inside them executed deep, structural layoffs. 
 
-Some industries don’t appear in the press much —  
-but their employees quietly faced **deeper cuts**.
+*Key Takeaway:* Industries like **Aerospace, Crypto, Travel, and Construction** have extremely high average percentage cuts because many companies inside them executed deep, structural layoffs. 
 
+Revealing how intense layoffs were at the company level.
+---
+## 2. Weighted Industry Layoff % (Industry-Wide Severity)
 
 ![Count vs Percent layoffs](images/Count%20vs%20Percentage%20Layoffs_Tableau.png) 
 
+##
+In this `Tableau` representation, I used Tableau’s calculated field interface to build a weighted percentage metric that adjusts for company size and reflects how much of each entire industry’s workforce was actually affected. The dataset includes company-level percentages (for example, one company might lay off 40% while another lays off 100%), but simply averaging these values can distort the true picture.
+
+Instead, I created a calculated field that weights each layoff event by the number of employees affected. This ensures that large-scale layoffs influence the results proportionally, while small startup collapses don’t overwhelm the analysis. The weighted metric provides a far more accurate representation of how deeply each industry was impacted overall, offering a much clearer sense of where the **deepest structural damage** occurred across the global economy.
+
+For example:
+
+- Crypto companies show many 80–100% layoffs (because small startups failed),
+BUT the weighted impact is only ~16%,
+meaning one out of six crypto jobs disappeared industry-wide.
+
+- Large industries like Tech or Retail show lower weighted percentages
+but extremely high total layoffs — meaning layoffs were widespread but distributed.
+
+This metric reveals how deeply layoffs cut into the entire industry’s workforce, not just individual companies.
 
 ---
 
@@ -162,15 +174,15 @@ but their employees quietly faced **deeper cuts**.
 
 ---
 
-## 🖼 Query  
+## 
 ![Country Totals Query](images/total_laid_off_by_country_query.png)
 
-## 🖼 Results  
+##  
 ![Country Totals Results](images/total_laid_off_by_country_results.png)
 
 ---
 
-## 🧠 Insight  
+## Insight  
 - 🇺🇸 **United States** dominates with **~530k layoffs**  
 - 🇮🇳 India → ~61k  
 - 🇩🇪 Germany → ~31k  
