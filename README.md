@@ -185,6 +185,7 @@ The U.S. alone represents 60–70% of all global layoffs, driven primarily by la
 - 🇩🇪 Germany (≈31k) and 🇬🇧 United Kingdom (≈29k) show significant cuts, mostly tied to financial services, auto manufacturing, and European recession pressures.
 - 🇳🇱 Netherlands, 🇦🇺 Australia, 🇨🇦 Canada, and 🇮🇱 Israel also experienced notable workforce reductions, especially in tech, fintech, and high-growth startups.
 ---
+
 🔍 What These Numbers Actually Suggest
 The outsized U.S. layoffs aren’t just a reflection of company count—they’re a reflection of risk appetite and business model:
 - The U.S. has more tech giants and high-growth startups than any other country.
@@ -206,8 +207,9 @@ This means the countries with the most layoffs are also the ones with the highes
 - aggressive hiring during COVID
 - high-paid knowledge workers
 - companies dependent on investor confidence
+
+  Which all correlate with larger and more visible workforce reductions once growth slows.
   
-Which all correlate with larger and more visible workforce reductions once growth slows.
 ---
 🧠 Key Takeaway
 
@@ -216,8 +218,8 @@ The U.S. dominating layoffs does not necessarily mean its economy is the weakest
 - faster scaling
 - more aggressive restructuring
 - more companies reporting layoffs publicly
-  
-In contrast, layoffs in Europe and Asia tend to be smaller, slower, and more regulated, which keeps their numbers far below U.S. levels even during downturns.
+
+  In contrast, layoffs in Europe and Asia tend to be smaller, slower, and more regulated, which keeps their numbers far below U.S. levels even during downturns.
 
 ---
 
@@ -229,70 +231,169 @@ Totals don’t show patterns — frequency and severity matter too.
 ![Country Health Results](images/country_health_results.png)
 
 ---
-There are **two types of countries**:
+
+🧭 What This Analysis Shows
+
+The number of layoffs alone doesn't show the economic stability of a region.
+Instead, combining:
+
+How often layoffs occur (frequency)
+
+How large they are (severity %)
+
+reveals a clearer picture of national workforce health.
+
+Using this method, two distinct **categories** emerge:
 
 ### 1️⃣ High-volume cuts (many events, moderate severity)
+These countries were affected heavily, but cuts were spread out across many companies.
 - United States  
-- India  
+- India
+
+These markets have:
+-Huge tech sectors
+-Fast-scaling startups
+-High reporting transparency
+-Frequent restructuring cycles
+
+So while total layoffs are high, the average severity % isn't extreme — indicating resilience.
 
 ### 2️⃣ Low-volume but extremely severe cuts
 - Singapore (~24% layoffs per event)  
 - Israel  
 - Australia  
-- United Kingdom  
+- United Kingdom
 
-This helps explain economic stability vs. fragility across regions.
+These cuts were often:
+-Sudden
+-Large
+-Highly concentrated
+-Tied to startup collapses or sharp local downturns
+
+This group reveals economic fragility despite fewer total events.
 
 ---
 
-# 📅 5. Layoffs by Year  
+🧠 Key Takeaway from Country Health Summary
+
+A country with fewer layoffs is not necessarily “healthier.”
+A country with many layoffs is not always “weaker.”
+
+Instead:
+-U.S. & India → High frequency, distributed impact, structurally sound
+-Singapore, Israel, Australia, U.K. → Much lower frequencies but higher cut rates, signaling structural stress
+
+This insight helps contextualize workforce risk across global regions.
+
+---
+
+# 📅 5. Layoffs by Year Overview  
+
 **Which years were the worst?**
+Which years were the worst? Which years showed recovery?
 
 ---
 ![Yearly Totals Query](images/total_laid_off_per_year_query.png)
 ![Yearly Totals Results](images/total_laid_off_per_year_results.png)
 
 ---
-- **2023** → Worst year (~264k layoffs)  
-- **2022** → Second worst (~164k)  
-- **2024** → Still extremely high  
-- **2020–2021** → Lower due to early pandemic stimulus  
+
+📈 Year-over-Year Breakdown
+
+2023 → The peak year (~264k layoffs)
+The “correction” year for big tech after years of over-expansion.
+
+2022 → Massive wave (~164k)
+Triggered by recession fears, rising interest rates, and shrinking venture capital liquidity.
+
+2024 → Still high
+Suggests layoffs were not a temporary shock but a multi-year trend.
+
+2020–2021 → Surprisingly lower
+Despite the pandemic, government stimulus and cheap capital prevented massive workforce cuts.
+
+---
+🧠 What This Suggests
+Layoffs follow economic cycles, not headlines.
+-2022–2024 represent a global correction period
+-Companies readjusted after pandemic over-hiring
+-High interest rates made new spending too expensive
+-Venture capital pulled back
+-Tech and startup ecosystems felt the impact first
 
 Confirms a **multi-year correction wave**, not a one-time shock.
 
 ---
 
 # 📈 6. Rolling Monthly Totals  
-This shows layoffs not as events —  
-but as a **growing global wave**.
+
+After examining layoffs year by year, the next logical question becomes:
+
+> ***“Were these layoffs isolated shocks… or part of a growing global momentum?”***
+
+Yearly totals tell us which years were the worst,
+but they don’t show how layoffs built up over time.
+
+What better way to reveal this momentum than with a Rolling Total —
+a view that stacks each month’s layoffs on top of the previous ones.
+This transforms the data from a set of disconnected events into a clear picture of how the global job market deteriorated month after month.
 
 ---
 ![Rolling Totals Query + Results](images/rolling_total_month_&_year.png)
 
 ---
-The cumulative number climbs steadily every month.  
-Layoffs did **not** slow down — they compounded.
+🔍 What the Rolling Total Shows
+
+The cumulative curve climbs relentlessly, with no signs of flattening:
+-Each month adds another layer of layoffs
+-The global job market absorbs shock after shock
+-Even when the headlines quiet down, the layoffs continue accumulating
+-The momentum never fully resets — it only grows
+
+This reveals a global workforce under persistent pressure, not a temporary disruption.
+
+The rolling total confirms what yearly breakdowns only hint at:
+
+> *“Layoffs were not a single wave — they were a multi-year, compounding cycle."*
+
+---
+🧠 Why This Matters
+Rolling totals expose something the raw numbers hide:
+-Companies downsized continuously, not sporadically
+-Economic uncertainty became a sustained condition
+-Workforce reductions became part of corporate strategy, not just crisis response
+-“Recovery periods” never fully materialized
+
+This visualization makes it impossible to ignore:
+
+The global workforce was experiencing compounding stress, not isolated events.
 
 ---
 
 # 🏢 7. Top Companies Per Year  
 Which companies laid off the most staff in each year?
 
+> *“Every year had a different villain — or victim — depending how you see it."*
+
 ---
 ![Company Ranking Query](images/company_ranking_query.png)
 ![Company Ranking Results](images/company_ranking_results.png)
 
 ---
-- **2020** → Uber, Booking.com, Groupon  
-- **2021** → Bytedance, Zillow, Katerra  
-- **2022** → Meta (11k), Amazon (10k), Cisco  
-- **2023–2024** → Tech giants continue dominating  
+🏅 Yearly Highlights
+**2020** → Uber, Booking.com, Groupon
+**2021** → Bytedance, Zillow, Katerra
+**2022** → Meta (11k), Amazon (10k), Cisco
+**2023–2024** → Tech giants continue to dominate layoffs
 
-Each year tells a different economic story.
+This ranking system helps reveal:
+-Which companies were hit hardest
+-Which industries triggered the largest waves
+-How different years reflect different economic pressures
 
 ---
 
-# 💀 8. Collapse-Level Companies (80–98% Layoffs)  
+# 💀 8. Near Collapse-Level Companies (80–98% Layoffs)  
 This is the list of companies that nearly **shut down**.
 
 ---
@@ -300,17 +401,47 @@ This is the list of companies that nearly **shut down**.
 ![Collapse Results](images/highest_collapsing_companies_results.png)
 
 ---
-Examples include:
 
-- **Flywheel Sports** — 98%  
-- **Pavilion Data** — 96%  
-- **NS8** — 95%  
-- **Vroom** — 90%  
-- **Treehouse** — 90%  
-- **OneWeb** — 85%  
 
-These weren’t layoffs.  
-These were **full organizational collapses**.
+⚠️ Examples of Catastrophic Cuts
+These are the companies that didn’t just downsize —
+they nearly ceased to exist.
+-**Flywheel Sports** — 98%
+-**Pavilion Data** — 96%
+-**NS8** — 95%
+-**Vroom** — 90%
+-**Treehouse** — 90%
+-**OneWeb** — 85%
+
+When layoffs exceed 80%, the company isn’t “restructuring.”
+it's **fighting to survive**.
+
+This list exposes companies that:
+-Lost funding
+-Failed to scale
+-Collapsed internally
+-Or simply shut down in all but name
+A sobering reminder of the fragility of venture-backed firms.
+
+
+
+❗ Why 100% Layoff Cases Were Not Included in This List
+The dataset contains several cases marked as 100% layoffs — meaning the entire workforce was terminated.
+
+However, I intentionally excluded these from the “collapse severity” view for two reasons:
+1. **100% layoffs indicate a complete shutdown**, not a near-collapse.
+     These companies are no longer operational, so they don’t meaningfully contribute to a comparative “severity” analysis.
+2. **Including them would flatten the visual range**, making the 80–98% catastrophic cases harder to interpret.
+3.     The goal here is to profile companies that came close to collapsing, not those that already did.
+4. 100% entries often reflect final administrative closures, not economic layoffs — for example:
+      - Bankruptcy liquidation
+      - Legal dissolution filings
+      - Acquisition and termination of original workforce
+      - End-of-life shutdowns
+
+These aren’t layoffs in the traditional sense — **they are company death events**, and therefore are treated separately in the dataset.
+
+
 
 ---
 
@@ -323,6 +454,19 @@ These were **full organizational collapses**.
 ### ✔️ Several companies nearly shut down entirely
 
 This dataset reflects global instability in a way headlines never fully capture.
+
+🧩 9. Main Takeaways
+Here’s the entire project condensed:
+🇺🇸 The U.S. drives most global layoffs — not due to weakness, but size
+📉 Some industries cut deeper than headlines suggest
+📅 2022–2023 were peak disruption years
+🌊 Layoffs formed a multi-year wave, not an isolated shock
+🏚 Several companies nearly shut down entirely (80–98% layoffs)
+Global layoffs tell a story of:
+Over-scaling
+Economic tightening
+Technology overinvestment
+And rapid reversal when conditions changed
 
 ---
 
@@ -341,7 +485,48 @@ Using SQL helped transform chaotic raw data into a clear narrative about global 
 This wasn’t just analysis —  
 it was a real look into how unpredictable the modern job market has become.
 
+
+***🧠 10. Reflections
+This project reminded me that data isn’t just math —
+it's people.
+Each row represents:
+Someone’s job disappearing
+A family facing uncertainty
+A company trying to survive
+A team dissolving overnight
+SQL gave structure to chaos.
+Tableau brought clarity to patterns.
+And this case study revealed the emotional and economic reality behind global instability.
+
+This was more than analysis.
+It was a global story.***
+
 ---
 
 # 📁 Repository Structure
+
+├── data/
+│   ├── Raw_Global_layoffs_file.csv       # Original dataset (uncleaned)
+│   ├── Clean_Global_layoffs_file.csv     # Cleaned dataset for analysis
+│
+├── images/                               # All SQL result screenshots + visualizations
+│   ├── first_staging_table.png
+│   ├── staging_table_insert.png
+│   ├── removing_duplicates.png
+│   ├── average_percentage_laid_off_query.png
+│   ├── average_percentage_laid_off_results.png
+│   ├── Count vs Percentage Layoffs_Tableau.png
+│   ├── total_laid_off_by_country_query.png
+│   ├── total_laid_off_by_country_results.png
+│   ├── country_health_query.png
+│   ├── country_health_results.png
+│   ├── total_laid_off_per_year_query.png
+│   ├── total_laid_off_per_year_results.png
+│   ├── rolling_total_month_&_year.png
+│   ├── company_ranking_query.png
+│   ├── company_ranking_results.png
+│   ├── highest_collapsing_companies_query.png
+│   ├── highest_collapsing_companies_results.png
+│
+├── README.md                             # Full project documentation (this file)
 
