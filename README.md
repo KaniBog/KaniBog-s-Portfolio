@@ -139,9 +139,9 @@ This metric shows how aggressively companies within each industry cut their staf
 - **Aerospace** → the most severe average layoffs (~29%)  
 - **Construction, Crypto, Energy, Food, Travel** → consistently high (19–22%)  
 - **Healthcare & Education** surprisingly high  
-- **Finance** still averages **~15% per event**
+- **Finance** still averages ~15% per event
 
-*Key Takeaway:* Industries like **Aerospace, Crypto, Travel, and Construction** have extremely high average percentage cuts because many companies inside them executed deep, structural layoffs. 
+***Key Takeaway:*** Industries like **Aerospace, Crypto, Travel, and Construction** have extremely high average percentage cuts because many companies inside them executed deep, structural layoffs. 
 
 Revealing how intense layoffs were at the company level.
 
@@ -179,11 +179,11 @@ To wrap up, this metric reveals how deeply layoffs cut into the entire industry�
 
 ## Layoffs by Country (Deeper Breakdown)
 
-- 🇺🇸 United States dominates with ~530,000 layoffs, far exceeding every other country in the dataset.
-The U.S. alone represents 60–70% of all global layoffs, driven primarily by large tech firms, venture-funded companies, and corporate restructurings after years of rapid expansion.
-- 🇮🇳 India follows with ~61,000 layoffs, reflecting the scale of its tech outsourcing sector and hiring freezes post-pandemic.
-- 🇩🇪 Germany (≈31k) and 🇬🇧 United Kingdom (≈29k) show significant cuts, mostly tied to financial services, auto manufacturing, and European recession pressures.
-- 🇳🇱 Netherlands, 🇦🇺 Australia, 🇨🇦 Canada, and 🇮🇱 Israel also experienced notable workforce reductions, especially in tech, fintech, and high-growth startups.
+- United States dominates with **~530,000** layoffs, far exceeding every other country in the dataset.
+The U.S. alone represents **60–70%** of all global layoffs, driven primarily by large tech firms, venture-funded companies, and corporate restructurings after years of rapid expansion.
+- India follows with **~61,000** layoffs, reflecting the scale of its tech outsourcing sector and hiring freezes post-pandemic.
+- Germany (≈31k) and United Kingdom **(≈29k)** show significant cuts, mostly tied to financial services, auto manufacturing, and European recession pressures.
+- Netherlands, Australia, Canada, and Israel also experienced notable workforce reductions, especially in tech, fintech, and high-growth startups.
   
 ---
 
@@ -191,7 +191,7 @@ The U.S. alone represents 60–70% of all global layoffs, driven primarily by la
 The outsized U.S. layoffs aren’t just a reflection of company count—they’re a reflection of risk appetite and business model:
 - The U.S. has more tech giants and high-growth startups than any other country.
 - These companies scaled aggressively during 2020–2021, then rapidly downsized when macroeconomic conditions shifted.
-- The “hire fast → fire fast” cycle is structurally more common in the U.S. labor market compared to Europe or Asia.
+- The *“hire fast → fire fast”* cycle is structurally more common in the U.S. labor market compared to Europe or Asia.
 
 Meanwhile:
 - India’s layoff concentration mirrors its large IT and BPO workforce.
@@ -238,14 +238,11 @@ Totals don’t show patterns — frequency and severity matter too.
 
 The number of layoffs alone doesn't show the economic stability of a region.
 Instead, combining:
-
-How often layoffs occur (frequency)
-
-How large they are (severity %)
-
+- How often layoffs occur (frequency)
+- How large they are (severity %)
 reveals a clearer picture of national workforce health.
 
-Using this method, two distinct **categories** emerge:
+## Using this method, two distinct **categories** emerge:
 
 ### 1️⃣ High-volume cuts (many events, moderate severity)
 These countries were affected heavily, but cuts were spread out across many companies.
@@ -279,8 +276,7 @@ This group reveals economic fragility despite fewer total events.
 ### 🧠 Key Takeaway from Country Health Summary
 
 A country with fewer layoffs is not necessarily “healthier.”
-A country with many layoffs is not always “weaker.”
-
+A country with many layoffs is not always “weaker.” 
 Instead:
 - U.S. & India → High frequency, distributed impact, structurally sound
 - Singapore, Israel, Australia, U.K. → Much lower frequencies but higher cut rates, signaling structural stress
@@ -341,6 +337,8 @@ a view that stacks each month’s layoffs on top of the previous ones.
 This transforms the data from a set of disconnected events into a clear picture of how the global job market deteriorated month after month.
 
 ---
+
+![rolling_total_month_&_year + Query](images/rolling_total_month_&_year.png)
 ![Rolling Totals Query + Results](images/rolling_total_month_&_year.png)
 
 ---
@@ -382,11 +380,11 @@ Which companies laid off the most staff in each year?
 ![Company Ranking Results](images/company_ranking_results.png)
 
 ---
-##🏅 Yearly Highlights
-**2020** → Uber, Booking.com, Groupon
-**2021** → Bytedance, Zillow, Katerra
-**2022** → Meta (11k), Amazon (10k), Cisco
-**2023–2024** → Tech giants continue to dominate layoffs
+## 🏅 Yearly Highlights
+**2020** → Uber, Booking.com, Groupon<br>
+**2021** → Bytedance, Zillow, Katerra<br>
+**2022** → Meta (11k), Amazon (10k), Cisco<br>
+**2023–2024** → As evident, tech giants continue to dominate layoffs<br>
 
 This ranking system helps reveal:
 - Which companies were hit hardest
@@ -424,7 +422,7 @@ This list exposes companies that:
 - Collapsed internally
 - Or simply shut down in all but name
   
-A sobering reminder of the fragility of venture-backed firms.
+A reality that many start-up or even some well-off companies come to face.
 
 ### ❗Why 100% Layoff Cases Were Not Included in This List
 The dataset contains several cases marked as 100% layoffs — meaning the entire workforce was terminated.
@@ -434,13 +432,13 @@ However, I intentionally excluded these from the “collapse severity” view fo
      These companies are no longer operational, so they don’t meaningfully contribute to a comparative “severity” analysis.
 2. **Including them would flatten the visual range**, making the 80–98% catastrophic cases harder to interpret.
      The goal here is to profile companies that came close to collapsing, not those that already did.
-4. 100% entries often reflect final administrative closures, not economic layoffs — for example:
+4. **100% entries often reflect final administrative closures**, not economic layoffs — for example:
       - Bankruptcy liquidation
       - Legal dissolution filings
       - Acquisition and termination of original workforce
       - End-of-life shutdowns
 
-These aren’t layoffs in the traditional sense — **they are company death events**, and therefore are treated separately in the dataset.
+These aren’t layoffs in the traditional sense — **these can be considered as company death events**, and therefore are treated separately in the dataset.
 
 
 
@@ -451,8 +449,8 @@ These aren’t layoffs in the traditional sense — **they are company death eve
 This dataset reflects global instability in a way headlines never fully capture.
 
 Here’s the entire project condensed:
-### 🇺🇸 The U.S. drives most global layoffs — not due to weakness, but size
-### 📉 Some industries cut deeper than headlines suggest
+### The U.S. drives most global layoffs — not due to weakness, but size
+### Some industries cut deeper than headlines suggest
 ### 📅 2022–2023 were peak disruption years
 ### 🌊 Layoffs formed a multi-year wave, not an isolated shock
 ### 🏚 Several companies nearly shut down entirely (80–98% layoffs)
@@ -460,7 +458,7 @@ Here’s the entire project condensed:
 ## Global layoffs tell a story of:
  - Over-scaling
  - Economic tightening
- - Technology overinvestment
+ - Technology over-investment
  - And rapid reversal when conditions changed
 
 ---
@@ -475,19 +473,16 @@ Every row in this dataset represents a moment where something changed:
 - A family had to adjust overnight  
 - A career path was interrupted  
 - A team that once collaborated splintered apart  
-- A company tried, and sometimes failed, to stay alive  
+- A company tried, and sometimes failed, to stay afloat
 
 Layoffs aren’t abstract events.  
 They ripple through households, communities, and entire industries.
 
-Working through this analysis showed me how SQL can turn raw, disorganized chaos into a structured story.  
-Tableau helped reveal patterns hidden behind thousands of scattered events.  
+Working through this analysis showed me how SQL can turn raw, disorganized chaos into a structured story while Tableau uncovered hidden patterns in countless events. Together, they told the story that headlines often overlook — the lives behind the numbers
 
-Together, they painted a picture that headlines rarely capture:  
-the emotional and economic turbulence behind global workforce instability.
+Call To Action
 
-This wasn’t just a technical exercise —  
-it was a reminder of how interconnected data is with real people, real struggles, and real resilience.
+I would love to hear your thoughts! Connect with me on LinkedIn, or if you or someone you know is looking to hire a data analyst, let’s talk! Feel free to reach out with your thoughts or questions.
 
 ---
 
